@@ -1,0 +1,20 @@
+// Example: Toggle Mobile Menu
+function toggleMenu() {
+    const menu = document.querySelector("nav ul");
+    menu.classList.toggle("active");
+}
+
+document.querySelector(".menu-toggle").addEventListener("click", toggleMenu);
+
+// Example: Store User Preferences
+function saveUserPreferences() {
+    const darkMode = document.querySelector("#dark-mode").checked;
+    localStorage.setItem("darkMode", darkMode);
+}
+
+document.querySelector("#dark-mode").addEventListener("change", saveUserPreferences);
+
+// Example: Apply Dark Mode if user preference exists
+if (localStorage.getItem("darkMode") === "true") {
+    document.body.classList.add("dark-mode");
+}
